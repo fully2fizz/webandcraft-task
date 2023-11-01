@@ -1,0 +1,123 @@
+
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+html, body {
+	margin: 0;
+	height: 100%;
+}
+body {
+	font-family: $body;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+section, .container, .container-fluid {position: relative;}
+.container, .container-fluid {z-index: 10;}
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+	margin: 0;
+	padding: 0;
+}
+ul[class], ol[class] {padding: 0;}
+ul[class] {list-style: none;}
+
+
+/* # Typography
+--------------------------------------------------------------*/
+h1 {
+	font-family: $body;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+h2,h3,h4,h5,h6 {
+	font-family: $body;
+	line-height: normal;
+	margin-bottom: 20px;
+}
+p[class], ul[class] li, ol[class] li { font-size: 1rem; }
+p {
+	line-height: 1.6rem;
+	margin-bottom: 20px;
+}
+
+// buttons style
+.btn {
+    color: #FFF;
+    font-family: $body;
+    font-size: 1rem;
+	line-height: 1.5rem;
+	text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btn-primary {
+	padding: 16px 40px;
+	border-radius: 50px;
+	background-color: $btn-primary;
+	box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+	border: none;
+	transition: all .3s ease;
+    &:hover {
+		letter-spacing: 2px;
+		background-color: $btn-primary;
+		box-shadow: rgba(82, 251, 138, 0.24) 0px 3px 8px;
+	   }
+}
+.btn-outline {
+	padding: 16px 70px 16px 40px;
+	border-radius: 50px;
+	background-color: transparent;
+	border: 1px solid $btn-primary;
+	position: relative;
+	transition: all .3s ease;
+	&::after {
+		content: '';
+		width: 21px;
+		height: 15px;
+		background-image: url(../svg/arrow-btn.svg);
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 21px;
+		top: 19px;
+		transition: all .3s ease;
+	}
+	&:hover {
+		background-color: $btn-primary;
+		letter-spacing: 2px;
+		color: #FFF;
+	}
+}
+.btn-outline-no {
+	padding: 16px 40px;
+	border-radius: 50px;
+	background-color: transparent;
+	border: 1px solid $white;
+	position: relative;
+	transition: all .3s ease;
+	&:hover {
+		background-color: $btn-primary;
+		letter-spacing: 2px;
+		color: #FFF;
+	}
+}

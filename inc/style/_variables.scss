@@ -1,0 +1,24 @@
+/* Breakpoints */
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 991px;
+$bp-xl: 1200px;
+$bp-xxl: 1440px;
+
+/* Setup font families here and adjust font weights as needed */
+$body: 'Open Sans', sans-serif;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+
+/* Set up custom variables for brand colors */
+$brand-primary: #04553C;
+$btn-primary: #00AD00;
+$brand-secondary: #1D1D1B;
+$white: #fff;
+$black: #000;
+
+$shadow-low: 0px, 0px, 15px, 0px rgba(0, 0, 0, 0.25);
