@@ -391,7 +391,7 @@ gsap.to(".loading-screen", {
 	ease: "power1.inOut"
 });
 
-gsap.to(".vid-wrap", 1.5, {
+gsap.to(".home .vid-wrap", 1.5, {
 	delay: 7,
 	scale: 1,
 	ease: "power4.inOut",
@@ -400,7 +400,7 @@ gsap.to(".vid-wrap", 1.5, {
 	}
 });
 
-gsap.to("h1", 1.5, {
+gsap.to(".home h1", 1.5, {
 	delay: 7.5,
 	y: 0,
     opacity: 1,
@@ -409,7 +409,7 @@ gsap.to("h1", 1.5, {
 		amount: 0.1
 	}
 });
-gsap.to(".anim-banner-txt", 1.5, {
+gsap.to(".home .anim-banner-txt", 1.5, {
 	delay: 7.6,
 	y: 0,
     opacity: 1,
@@ -418,7 +418,7 @@ gsap.to(".anim-banner-txt", 1.5, {
 		amount: 0.1
 	}
 });
-gsap.to(".header-inner, .topbar", 1.5, {
+gsap.to(".home .header-inner, .home .topbar", 1.5, {
 	delay: 7.8,
     opacity: 1,
 	y: 0,

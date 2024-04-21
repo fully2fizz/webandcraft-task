@@ -401,13 +401,16 @@ a.viewBtn:hover::after {
   padding: 5px 0;
   background-color: #000000;
   border-bottom: 1px solid #1E1E1E;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
 }
 @media screen and (max-width: 1200px) {
   .header .topbar {
     display: none;
   }
+}
+
+.home .header .topbar {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .header .topbar .header-top-row {
@@ -481,6 +484,9 @@ a.viewBtn:hover::after {
   background: #000000;
   z-index: 999;
   width: 100%;
+}
+
+.home .header .header-inner {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
 }
@@ -875,13 +881,13 @@ button:not(:disabled) {
   text-decoration: none;
 }
 
-.banner {
+.home .banner {
   height: 100svh;
   max-height: 100svh;
   width: 100%;
   position: relative;
 }
-.banner .vid-wrap {
+.home .banner .vid-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -890,7 +896,7 @@ button:not(:disabled) {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
-.banner .vid-wrap::before {
+.home .banner .vid-wrap::before {
   content: "";
   position: absolute;
   top: -30px;
@@ -902,7 +908,7 @@ button:not(:disabled) {
   background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
-.banner .vid-wrap::after {
+.home .banner .vid-wrap::after {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -914,7 +920,7 @@ button:not(:disabled) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
-.banner .vid-wrap img {
+.home .banner .vid-wrap img {
   position: absolute;
   top: 0;
   left: 0;
@@ -923,7 +929,7 @@ button:not(:disabled) {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.banner .text-wrapper {
+.home .banner .text-wrapper {
   position: absolute;
   bottom: 69px;
   left: 0;
@@ -931,11 +937,11 @@ button:not(:disabled) {
   z-index: 2;
 }
 @media screen and (max-width: 991.98px) {
-  .banner .text-wrapper {
+  .home .banner .text-wrapper {
     bottom: 24px;
   }
 }
-.banner .text-wrapper h1.home-title {
+.home .banner .text-wrapper h1.home-title {
   font-size: 2.5rem;
   line-height: 3.25rem;
   font-weight: 300;
@@ -945,12 +951,12 @@ button:not(:disabled) {
           transform: translateY(30px);
 }
 @media screen and (max-width: 991.98px) {
-  .banner .text-wrapper h1.home-title {
+  .home .banner .text-wrapper h1.home-title {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
-.banner .text-wrapper .desc {
+.home .banner .text-wrapper .desc {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 300;
@@ -961,7 +967,7 @@ button:not(:disabled) {
           transform: translateY(30px);
 }
 @media screen and (max-width: 1199.98px) {
-  .banner .text-wrapper .desc {
+  .home .banner .text-wrapper .desc {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
     letter-spacing: 0.0225rem;
@@ -2496,4 +2502,294 @@ button:not(:disabled) {
 }
 .footer .copyright-wrap p + p {
   margin-top: 0.625rem;
+}
+
+/* --------------------------------------------------------------
+ >> ABOUT PAGE Styles
+-------------------------------------------------------------- */
+.banner-others {
+  height: 70svh;
+  max-height: 70svh;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/abt-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-others .text-wrapper {
+  position: absolute;
+  bottom: 69px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+@media screen and (max-width: 991.98px) {
+  .banner-others .text-wrapper {
+    bottom: 24px;
+  }
+}
+.banner-others .text-wrapper h1.home-title {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+@media screen and (max-width: 991.98px) {
+  .banner-others .text-wrapper h1.home-title {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+.banner-others .text-wrapper .desc {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.025rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .banner-others .text-wrapper .desc {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.0225rem;
+  }
+}
+
+.abt-block {
+  padding: 70px 0;
+  background-color: #fff;
+}
+.abt-block .abt-wrapTitle {
+  width: 100%;
+  height: 150px;
+  background-color: #e3e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.abt-block .abt-wrapTitle h3 {
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (max-width: 991.98px) {
+  .abt-block .abt-wrapTitle h3 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+.abt-block .abt-descrptn {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.abt-block .abt-descrptn p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.0225rem;
+  color: #000;
+}
+.abt-block .abt-descrptn .abt-imgBlock {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .abt-block .abt-descrptn .abt-imgBlock {
+    height: 250px;
+  }
+}
+.abt-block .abt-descrptn .abt-imgBlock img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* --------------------------------------------------------------
+ >> SERVICE PAGE Styles
+-------------------------------------------------------------- */
+.service-banner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/abt-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service-banner .text-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: 2;
+}
+.service-banner .text-wrapper h1 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.025rem;
+}
+@media screen and (max-width: 1199.98px) {
+  .service-banner .text-wrapper h1 {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.0225rem;
+  }
+}
+.service-banner .text-wrapper h2.home-title {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 300;
+  color: #fff;
+  max-width: 20ch;
+}
+@media screen and (max-width: 991.98px) {
+  .service-banner .text-wrapper h2.home-title {
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+}
+.service-banner .text-wrapper .detail-service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 50px;
+  margin: 50px 0;
+  position: relative;
+}
+.service-banner .text-wrapper .detail-service .scroll-wrap {
+  width: 40%;
+}
+@media screen and (max-width: 991.98px) {
+  .service-banner .text-wrapper .detail-service .scroll-wrap {
+    display: none;
+  }
+}
+.service-banner .text-wrapper .detail-service .scroll-wrap .scroll-more {
+  width: 180px;
+  height: 180px;
+  margin-left: auto;
+  position: absolute;
+}
+.service-banner .text-wrapper .detail-service .scroll-wrap .scroll-more::after {
+  content: "";
+  width: 180px;
+  height: 180px;
+  background-image: url(../img/scrollmore.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: spin 8s infinite linear;
+          animation: spin 8s infinite linear;
+}
+.service-banner .text-wrapper .detail-service .scroll-wrap .scroll-more::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-image: url(../img/downarrow.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.service-banner .text-wrapper .detail-service .detail-wrap {
+  width: 60%;
+}
+@media screen and (max-width: 991.98px) {
+  .service-banner .text-wrapper .detail-service .detail-wrap {
+    width: 100%;
+  }
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #161515;
+  padding: 30px 20px;
+  position: relative;
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  background-color: #FCBF10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+@media screen and (max-width: 991.98px) {
+  .service-banner .text-wrapper .detail-service .detail-wrap .service-items {
+    width: 100%;
+  }
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items .serv-detail-text {
+  font-size: 1.5rem;
+  list-style: 2.125rem;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  z-index: 9;
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items img {
+  width: 25px;
+  height: 28px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items:hover::before {
+  height: 100%;
+}
+.service-banner .text-wrapper .detail-service .detail-wrap .service-items:hover img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
