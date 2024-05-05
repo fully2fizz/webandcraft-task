@@ -10,6 +10,11 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	@media screen and (max-width: 991.98px) {
+		html {
+		  scroll-behavior: unset !important;
+		}
+	  }
 }
 html, body {
 	margin: 0;
@@ -17,8 +22,6 @@ html, body {
 }
 body {
 	font-family: $body;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
 }
 section, .container, .container-fluid {position: relative;}
 .container, .container-fluid {z-index: 10;}

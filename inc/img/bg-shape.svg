@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1950.72" height="245.477" viewBox="0 0 1950.72 245.477">
+  <defs>
+    <filter id="divider">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <path id="divider-2" data-name="divider" d="M956.247,190.26,0,.355V244.041H1950.72V-1.436Z" transform="translate(0 1.436)" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#fff)">
+      <path id="divider-3" data-name="divider" d="M956.247,190.26,0,.355V244.041H1950.72V-1.436Z" transform="translate(0 1.44)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
