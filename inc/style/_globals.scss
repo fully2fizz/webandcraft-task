@@ -44,7 +44,23 @@ p, h1, h2, h3, h4, h5, h6 {
 ul[class], ol[class] {padding: 0;}
 ul[class] {list-style: none;}
 
+.lenis {
+  &.lenis-smooth {
+    scroll-behavior: auto;
 
+    [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+  }
+
+  &.lenis-stopped {
+    overflow: hidden;
+  }
+
+  &.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
 /* # Typography
 --------------------------------------------------------------*/
 h1 {

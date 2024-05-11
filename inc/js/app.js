@@ -2,7 +2,7 @@
 // const lenis = new Lenis()
 
 const lenis = new Lenis({
-  speed: 800,
+  speed: 500,
   offset: 50,
   duration: 1.2,
   easing: (t => Math.min(1, 1.001 - Math.pow(2, -9 * t))),
@@ -92,7 +92,7 @@ function countUp(element, label, endValue) {
 }
 
 
-
+// scroll trigger
 // Gsap scroll animation
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,6 +106,60 @@ scrollTrigger: {
   end: "bottom 40%"
 }
 });
+
+
+gsap.to(".banner", {
+  scale: 2,
+  scrollTrigger: {
+    trigger: ".banner",
+    scrub: 1,
+    start: "top 0%",
+    end: "bottom 20%"
+  }
+  });
+
+  gsap.to(".banner-overlay", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".banner-overlay",
+      scrub: 1,
+      start: "top 0%",
+      end: "bottom 70%"
+    }
+    });
+
+    // about page 
+    
+
+    // service page 
+let updateFns = gsap.utils.toArray(".workSection").map(function (elem) {
+
+      var color = elem.getAttribute('data-color');
+  
+      let trigger = ScrollTrigger.create({
+          trigger: elem,
+          start: 'top 50%',
+          end: 'bottom 5%',
+          markers: false,
+          onToggle() {
+            gsap.to(".service-wrapper", {
+              backgroundColor: color,
+              duration: 1.4
+            });
+          }
+      });
+    
+      return () => {
+        color = elem.getAttribute('data-color');
+        if (trigger.isActive) {
+          gsap.killTweensOf(".service-wrapper");
+          gsap.set(".service-wrapper", {
+            backgroundColor: color
+          })
+        }
+      }
+  });
+  
 
 // sticky scroll animation
 
@@ -338,7 +392,7 @@ gsap.from(".loader-2", {
 gsap.to(".loader", {
 	background: "none",
 	delay: 6,
-	duration: 0.1
+	duration: 0.1,
 });
 
 gsap.to(".loader-1", {
@@ -409,7 +463,7 @@ gsap.to(".home .anim-banner-txt", 1.5, {
 	}
 });
 gsap.to(".home .header-inner, .home .topbar", 1.5, {
-	delay: 7.8,
+	delay: 7.6,
     opacity: 1,
 	y: 0,
 	ease: "power4.inOut",
@@ -417,3 +471,5 @@ gsap.to(".home .header-inner, .home .topbar", 1.5, {
 		amount: 0.1
 	}
 });
+
+

@@ -463,7 +463,19 @@
 	height: 100svh;
 	max-height: 100svh;
 	width: 100%;
+  transform: scale(1);
 	position: relative;
+
+  .banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 9;
+  }
   
 	.vid-wrap {
 	  position: absolute;
@@ -548,13 +560,16 @@
 			letter-spacing:  size(.36);
 		  }
 		}
+    a {
+      width: 200px;
+    }
 	}
   }
 
 
 //   about count section 
 .about {
-  padding: size(140) 0;
+  padding: size(70) 0 size(140);
   background-color: #000;
 
   @include max(1199.98) {
@@ -997,26 +1012,40 @@
       max-width: size(518);
       width: 100%;
       margin-bottom: size(30);
-	  height: 350px;
-	  overflow: hidden;
-
+      height: 350px;
+      overflow: hidden;
+      position: relative;
       @include max(991.98) {
         margin-bottom: size(14);
-		height: 250px;
+		    height: 250px;
       }
+
       figure {
-		height: 350px;
-        overflow: hidden;
-		@include max(991.98) {
+		  height: 350px;
+      overflow: hidden;
+      visibility: visible;
+		  @include max(991.98) {
 			height: 250px;
 		  }
-
         img {
-          transition: all ease-out 0.5s;
-		  object-fit: cover;
-          will-change: transform;
+		      object-fit: cover;
         }
 
+      }
+      @include min(991.98) {
+        .hover-video {
+          width: 100%;
+          height: 350px;
+          overflow: hidden;
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          video {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
 
@@ -1039,8 +1068,11 @@
     }
 
     &:hover {
-      img {
-        transform: scale(1.08);
+      figure {
+        visibility: hidden;
+      }
+      .hover-video {
+        visibility: visible;
       }
     }
   }
@@ -1051,6 +1083,7 @@
   width: 100%;
   padding: size(100) 0;
   background-color: #000000;
+  overflow: hidden;
   position: relative;
   &::after {
 	content: '';
@@ -1061,6 +1094,9 @@
 	position: absolute;
 	top: 0;
 	right: -35vw;
+  @include max(991.98) {
+   display: none;
+  }
   }
   @include max(991.98) {
     padding: size(50) 0;
@@ -2096,6 +2132,59 @@
   }
 }
 
+// about vision
+.abt-vision {
+  padding: 100px 0;
+  background-color: #000;
+  position: relative;
+  @include max(991.98) {
+    padding: 50px 0;
+  }
+  .abt_v-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .abt_v-accod-wrap {
+      background: #FCBF10;
+      width: max(50vw, 280px);
+      padding: 25px 30px 10px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 30px 30px -10px rgba(0, 0, 0, .3);
+      position: sticky;
+      top: 100px;
+      @include max(991.98) {
+        padding: 15px 20px 8px;
+      }
+
+      &:nth-child(2) {
+        background: #ccc;
+      }
+      
+      &:nth-child(3) {
+        background: #ffffff;
+      }
+      h3 {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 500;
+        color: #000;
+        @include max(991.98) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+      .text {
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          color: $brand-secondary;
+        }
+      }
+    }
+  }
+}
+
 
 
  /* --------------------------------------------------------------
@@ -2111,6 +2200,9 @@
   padding: 250px 0 100px 0;
   @include max(991)  {
     padding: 100px 0;
+  }
+  @include max(500)  {
+    padding: 100px 0 20px;
   }
     .text-content {
       h1 {
@@ -2235,6 +2327,13 @@
             img {
               transform: scale(0.8);
             }
+          }
+          a {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
           }
         }
       }
@@ -2407,6 +2506,150 @@ textarea:focus {
 .wpcf7 form.failed .wpcf7-response-output, .wpcf7 form.aborted .wpcf7-response-output {
   color: #fff;
 }
+
+
+// service page *************************************
+// **************************************************
+.service-wrapper{
+  .workSection {
+    padding: 80px 0;
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    @include max(991) {
+      padding: 40px 0;
+    }
+  }
+  .uiux-wrap {
+    .ui_head__wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 0 40px;
+      border-bottom: 1px solid #ebebeb;
+      padding-bottom: 40px;
+      @include max(991) {
+        flex-direction: column;
+        align-items: start;
+        grid-area: 30px;
+        padding-bottom: 20px;
+      }
+      .ui-content {
+        width: 100%;
+        max-width: 50%;
+        @include max(991) {
+          max-width: 100%;
+        }
+        h3 {
+          font-size: 38px;
+          line-height: 50px;
+          font-weight: 700;
+          color: #000;
+          margin-bottom: 0;
+          max-width: 18ch;
+          @include max(991) {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+          }
+        }
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          color: $brand-secondary;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .ui_discription__wrapper {
+      width: 100%;
+      height: 100%;
+      @include max(991) {
+        padding-top: 20px;
+      }
+      .ui_discrpn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 0 40px;
+        border-bottom: 1px solid #ebebeb;
+        padding: 40px 0;
+        @include max(991) {
+          flex-direction: column;
+          align-items: start;
+          grid-area: 30px;
+          padding: 20px 0;
+        }
+        .ui-content-item {
+          width: 100%;
+          max-width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 20px;
+          @include max(991) {
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
+          @include max(500) {
+            flex-wrap: wrap;
+          }
+          span {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h4 {
+              font-size: 22px;
+              line-height: 30px;
+              font-weight: 500;
+              color: #000;
+              margin-bottom: 0;
+            }
+          }
+            h3 {
+              font-size: 30px;
+              line-height: 40px;
+              font-weight: 500;
+              color: #000;
+              margin-bottom: 0;
+              max-width: 18ch;
+              @include max(991) {
+                font-size: 24px;
+                line-height: 34px;
+              }
+              @include max(500) {
+                max-width: unset;
+              }
+            }
+          }
+        }
+        .ui-content-para {
+          width: 100%;
+          max-width: 50%;
+          @include max(991) {
+            max-width: 100%;
+          }
+          p {
+            font-size: 16px;
+            line-height: 30px;
+            color: $brand-secondary;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  
 
 
 
