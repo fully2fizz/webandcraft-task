@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./inc/style/main.css">
 </head>
-<body>
+<body class="work-page">
 
 		<!-- Header Area -->
 		<header class="header" >
@@ -21,7 +21,7 @@
 							<ul class="top-link">
 								<li><a href="about.html">About</a></li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a href="#">FAQ</a></li>
+								<li><a href="blogs.html">Blog</a></li>
 							</ul>
 							<!-- End Contact -->
 						</div>
@@ -90,12 +90,19 @@
 
 		<nav class="responsive-nav">
 			<ul>
+				<span>Menu</span>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About </a></li>
 				<li><a href="service.html">Services </a></li>
 				<li><a href="work.html">Works</a></li>
 				<li><a href="blogs.html">Blogs</a></li>
 				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<ul>
+				<span>Socila Media</span>
+				<li class="res-social"><a href="#">Facebook</a></li>
+				<li class="res-social"><a href="#">Instagram</a></li>
+				<li class="res-social"><a href="#">Linkedin</a></li>
 			</ul>
 			<div class="close-btn"></div>
 		</nav>
@@ -120,26 +127,30 @@
 				<h2>Case Studies</h2>
 			  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 				<div class="col">
-				  <div class="cardWrap">
-					<div class="card-img-wrap">
-					  <figure class="mb-0">
-						<img src="inc/img/work-bg.jpg" alt="classic">
-					  </figure>
-					  <div class="hover-video">
-						<video autoplay muted loop playsinline>
-							<source src="inc/img/work-rreleven.MP4" type="video/mp4">
-						</video>
-					  </div>
-					</div>
-					<div class="card-footer-wrap">
-					  <h4>RR Eleven</h4>
-					  <p class="mb-0 fs-18">
-						The bold choice of blending tropical design with a rustic vibe.
-					  </p>
-					</div>
-				  </div>
+					<a href="#" class="open-workOffcanvas">
+						<div class="cardWrap">
+							<div class="card-img-wrap">
+							<figure class="mb-0">
+								<img src="inc/img/work-bg.jpg" alt="classic">
+							</figure>
+							<div class="hover-video">
+								<video autoplay muted loop playsinline>
+									<source src="inc/img/work-rreleven.MP4" type="video/mp4">
+								</video>
+							</div>
+							</div>
+							<div class="card-footer-wrap">
+							<h4>RR Eleven</h4>
+							<p class="mb-0 fs-18">
+								The bold choice of blending tropical design with a rustic vibe.
+							</p>
+							</div>
+						</div>
+					</a>
+
 				</div>
 				<div class="col">
+					<a href="#" class="open-workOffcanvas">
 				  <div class="cardWrap">
 					<div class="card-img-wrap">
 					  <figure class="mb-0">
@@ -158,8 +169,10 @@
 					  </p>
 					</div>
 				  </div>
+				</a>
 				</div>
 				<div class="col">
+					<a href="#" class="open-workOffcanvas">
 				  <div class="cardWrap">
 					<div class="card-img-wrap">
 					  <figure class="mb-0">
@@ -178,10 +191,40 @@
 					  </p>
 					</div>
 				  </div>
+				</a>
 				</div>
 			  </div>
 			</div>
 		  </section>
+
+		<!-- open work offcanvas -->
+			<div class="workOffcanvas">
+			<button class="closeBtn-offcanvas">&times;</button>
+			<div class="work-offcanvas-content">
+				<div class="work_bg"></div>
+				<div class="work_content">
+					<div class="prodect-name">
+						<div class="prodectItem">UI/UX Designing</div>
+						<div class="prodectItem">Website Development</div>
+						<div class="prodectItem">Branding</div>
+					</div>
+					<div class="item-detailHead">
+						<h2>RR-ELEVEN - Setting a new Website standard for these online grocery disruptors Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis dolorem vitae fuga deserunt nam nemo distinctio, eum aliquid.</h2>
+					</div>
+					<div class="item-detailHead">
+						<p> delio is a disruptive new concept that’s taking the online grocery market by storm. Launched in 2022,
+							 it aims to deliver a wide range of quality products at highly affordable prices. We designed their 
+							 mobile app, which is set to become the benchmark for the entire online shopping industry.</p>
+					</div>
+					<div class="work-design">
+						<div class="design-img"><img src="inc/img/rr-loading.jpg" alt="rreleven"></div>
+						<div class="design-img"><img src="inc/img/rr-page1.jpg" alt="rreleven"></div>
+						<div class="design-img"><img src="inc/img/rr-page2.jpg" alt="rreleven"></div>
+						<div class="design-img"><img src="inc/img/rr-page3.jpg" alt="rreleven"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 

@@ -91,6 +91,28 @@ function countUp(element, label, endValue) {
   });
 }
 
+// work page offcanvas
+$(document).ready(function() {
+  $('.open-workOffcanvas').click(function(e) {
+      e.preventDefault();
+      $('.workOffcanvas').addClass('active');
+  });
+
+  $('.closeBtn-offcanvas').click(function(e) {
+      e.preventDefault();
+      $('.workOffcanvas').removeClass('active');
+  });
+
+  $('.workOffcanvas').click(function(e) {
+      if (!$(e.target).closest('.work-offcanvas-content').length && !$(e.target).hasClass('closeBtn-offcanvas')) {
+          $(this).removeClass('active');
+      }
+  });
+});
+
+
+
+
 
 // scroll trigger
 // Gsap scroll animation
