@@ -128,29 +128,6 @@ scrollTrigger: {
   end: "bottom 40%"
 }
 });
-
-
-gsap.to(".banner", {
-  scale: 2,
-  scrollTrigger: {
-    trigger: ".banner",
-    scrub: 1,
-    start: "top 0%",
-    end: "bottom 20%"
-  }
-  });
-
-  gsap.to(".banner-overlay", {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".banner-overlay",
-      scrub: 1,
-      start: "top 0%",
-      end: "bottom 70%"
-    }
-    });
-
-    // about page 
     
 
     // service page 

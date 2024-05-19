@@ -492,17 +492,6 @@
 	width: 100%;
   transform: scale(1);
 	position: relative;
-
-  .banner-overlay {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 9;
-  }
   
 	.vid-wrap {
 	  position: absolute;
@@ -510,7 +499,6 @@
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  transform: scale(1.5);
   
 	  &::before {
 		content: "";
@@ -533,7 +521,7 @@
 		width: 100%;
 		z-index: 1;
 		opacity: 1;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 90%);
 	  }
   
 	  img {
@@ -698,6 +686,7 @@
       font-size: size(16);
       font-weight: 500;
       line-height: 1.6;
+      color: #757575;
 
       @include max(1199.98) {
         font-size: size(15);
@@ -1008,6 +997,7 @@
 //   work style
 .portfolio {
   padding: size(100) 0;
+  overflow-x: hidden;
 
   @include max(1199.98) {
     padding: size(70) 0;
@@ -1035,6 +1025,7 @@
   }
 
   .cardWrap {
+    transition: all ease-in 0.2s;
     .card-img-wrap {
       max-width: size(518);
       width: 100%;
@@ -1227,7 +1218,131 @@
 }
   
 
+// benefits block style
+.homeBenifits {
+  padding: 100px 0;
+  background-color: #fff;
+  @include max(991) {
+    padding: 50px 0;
+   }
+   .benifitsTitle {
+    h3 {
+      font-size: 46px;
+      line-height: 60px;
+      color: #000;
+      font-weight: 600;
+      max-width: 20ch;
+      @include max(991) {
+        font-size: 30px;
+        line-height: 40px;
+        max-width: 34ch;
+       }
+    }
+   }
+   .benifitsCards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      .b-cardWrap {
+        flex: 1 1 45%;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 12px;
+        @include max(500) {
+          flex: 1 1 50%;
+         }
+        .b-cardIcon {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            object-fit: cover;
+          }
+        }
+        .b-cardTitle {
+          margin: 15px 0;
+          h4 {
+            font-size: 22px;
+            line-height: 30px;
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 0;
+          }
+        }
+        .b-cardDescrptn {
+          p {
+            margin-bottom: 0;
+            color: $brand-secondary;
+          }
+        }
+      }
+   }
+}
 
+
+// industries we worked
+.trustSection {
+  padding: 80px 0;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  @include max(991) {
+    padding: 40px 0;
+   }
+  &::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/shape-bg.svg);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	right: -35vw;
+    @include max(991.98) {
+       display: none;
+    }
+  }
+  h2 {
+		font-size: size(50);
+		line-height: size(68);
+		font-weight: 400;
+		color: #fff;
+		text-align: center;
+		@include max(991.98) {
+		  font-size: size(28);
+		  line-height: size(40);
+		  margin-bottom: 20px;
+		}
+	  }
+  .industriesWrap {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    .industriesIcon {
+      width: 60px;
+      height: 60px;
+      img {
+        object-fit: cover;
+      }
+    }
+    .indestriesDescpn {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 300;
+      color: #fff;
+      margin: 15px 0;
+      text-align: center;
+      max-width: 22ch;
+    }
+  }
+}
 
 
 // service block
@@ -1477,6 +1592,7 @@
 .faq {
     background-color: #ffffff;
     padding: 120px 0 90px 0;
+    overflow-x: hidden;
 }
 .faq .faq-image {
     width: 100%;
